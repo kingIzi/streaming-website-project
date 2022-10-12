@@ -12,12 +12,11 @@ import { VerifyEmailComponent } from './pages/verify-email/verify-email.componen
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  // { path: 'videos', component: HomeComponent, canActivate: [AuthGuard] },
-  { path: 'videos', component: HomeComponent },
+  { path: 'videos', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'landing', component: LandingComponent },
   { path: '', redirectTo: '/landing', pathMatch: 'full' },
   { path: 'register', component: RegisterComponent },
-  { path: 'about', component: AboutComponent },
+  { path: 'about', component: AboutComponent, canActivate: [AuthGuard] },
   { path: 'biso', redirectTo: '/about', pathMatch: 'full' },
   {
     path: 'videos/:videoId',

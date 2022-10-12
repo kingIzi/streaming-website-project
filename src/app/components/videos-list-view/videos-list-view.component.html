@@ -56,11 +56,8 @@
   <div class="row row-cols-1 row-cols-lg-2 g-4">
     <div *ngFor="let video of videosListData" class="col-sm-2">
       <button class="card">
-        <a routerLink="/videos/{{ video.id }}">
-          <fa-icon
-            [icon]="icons.faPlayCircle"
-            class="fa-icon play-icon"
-          ></fa-icon>
+        <a class="play-icon" routerLink="/videos/{{ video.id }}">
+          <fa-icon [icon]="icons.faPlayCircle" class="fa-icon"></fa-icon>
         </a>
         <img
           width="100%"
