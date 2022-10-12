@@ -1,0 +1,22 @@
+<header>
+  <nav class="nav-bar d-flex justify-content-between">
+    <div class="p-2 bd-highlight">
+      <a href="#"
+        ><h2 class="logo">
+          {{ navObj.logo.substr(0, 4) }}
+          <span>{{ navObj.logo.substr(4, 2) }}</span>
+        </h2></a
+      >
+    </div>
+    <!-- <div class="p-2 bd-highlight">
+      <a href="#"
+        ><h6>{{ navObj.navItem }}</h6></a
+      >
+    </div> -->
+    <div class="p-2 bd-highlight">
+      <a routerLink="/register"
+        ><button>{{ navObj.signUpBtn }}</button></a
+      >
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,57 @@
+<div class="bg-filler">
+  <div class="login-bg">
+    <div class="heading">
+      <h1>Boyeyi Bolamu</h1>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div>
+          <h4>Tosengi bo s'aboner</h4>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <form class="login-form" action="/login" method="post">
+          <div class="mb-3 m-4">
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Koma email na yo awa"
+              name="email"
+              [(ngModel)]="email"
+            />
+            <!-- <div id="emailHelp" class="form-text">Error message here</div> -->
+          </div>
+          <div class="mb-3 m-4">
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              placeholder="Koma mot de passe na yo awa"
+              name="password"
+              [(ngModel)]="password"
+            />
+            <!-- <div id="emailHelp" class="form-text">Error message here</div> -->
+          </div>
+          <div class="mb-3 form-check m-4">
+            <a routerLink="/home"
+              ><button (click)="onRegisterClicked()" class="custom-btn">
+                Mikotisa
+              </button></a
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="sign-in-link d-flex justify-content-center m-4">
+      <span>Deci oza aboner?</span
+      ><a class="login-link" routerLink="/login">Fina awa</a>
+    </div>
+    <div class="text-center">
+      <a class="return-link" routerLink="/landing">Zonga</a>
+    </div>
+  </div>
+</div>

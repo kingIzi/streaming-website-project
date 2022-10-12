@@ -1,0 +1,45 @@
+// .streaming-video {
+//   width: 100%;
+//   min-height: auto;
+//   background: none;
+//   video {
+//     width: 100%;
+//     height: auto;
+//     max-height: 500px;
+//   }
+//   h1 {
+//     position: absolute;
+//     padding: 20px;
+//     color: #d5ac2a;
+//   }
+// }
+
+.streaming-video {
+  width: 100%;
+  min-height: auto;
+  background: none;
+  h1 {
+    color: #fff;
+    padding: 4px;
+  }
+  video {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+  }
+}
+
+// .streaming-video {
+//   width: 100%;
+//   min-height: auto;
+//   height: 800px;
+//   background: none;
+//   z-index: 10;
+//   @media only screen and (max-width: 800px) {
+//     height: 400px;
+//   }
+//   .video-title {
+//     color: white;
+//     padding: 12px;
+//   }
+// }

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "history-webapp": {
+      "hosting": {
+        "streaming-website-project": [
+          "history-webapp"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "history-webapp"
+  }
+}

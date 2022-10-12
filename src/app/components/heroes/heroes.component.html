@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="wel-pg col-8">
+    <div>
+      <h1>
+        {{ heroesObj.welcomeText }}
+      </h1>
+    </div>
+    <div>
+      <h6>{{ heroesObj.detailedText }}</h6>
+    </div>
+    <div>
+      <a routerLink="/login">
+        <button class="custom-btn">
+          {{ heroesObj.signInBtn }}
+        </button>
+      </a>
+    </div>
+    <div>
+      <img
+        class="thumbnail"
+        width="100%"
+        height="350"
+        src="assets/img/mokolo-moko-te.png"
+        alt=""
+      />
+    </div>
+  </div>
+  <div class="img-gallery col-4">
+    <ul>
+      <li *ngFor="let element of heroesObj.images">
+        <img
+          src="{{ element }}"
+          alt=""
+          class="my-2"
+          width="100%"
+          height="150"
+        />
+      </li>
+    </ul>
+  </div>
+</div>

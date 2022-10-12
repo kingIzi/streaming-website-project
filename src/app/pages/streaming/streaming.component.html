@@ -1,0 +1,15 @@
+<div class="container">
+  <app-navigation></app-navigation>
+  <div class="streaming-video">
+    <div class="row-2">
+      <div>
+        <h1 class="video-title">{{ video.title }}</h1>
+      </div>
+      <div>
+        <video controls [src]="video.videoUrl" type="video/mp4"></video>
+      </div>
+    </div>
+  </div>
+  <app-videos-list-view class="m-4"></app-videos-list-view>
+  <router-outlet></router-outlet>
+</div>

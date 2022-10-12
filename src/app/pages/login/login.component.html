@@ -1,0 +1,61 @@
+<div class="bg-filler">
+  <div class="login-bg">
+    <div class="heading">
+      <h1>Boyeyi Bolamu</h1>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div>
+          <h4>Kotisa ba donner na yo mpo okota</h4>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <form class="login-form" action="/login" method="post">
+          <div class="mb-3 m-4">
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Koma email na yo awa"
+              name="email"
+              [(ngModel)]="email"
+            />
+            <!-- <div id="emailHelp" class="form-text">Error message here</div> -->
+          </div>
+          <div class="mb-3 m-4">
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              placeholder="Koma mot de passe na yo awa"
+              name="password"
+              [(ngModel)]="password"
+            />
+            <!-- <div id="emailHelp" class="form-text">Error message here</div> -->
+          </div>
+          <div class="mb-3 d-flex justify-content-center">
+            <a class="form-text forgot-password" routerLink="/forgot-password"
+              >Obosani mot de passe na yo?</a
+            >
+          </div>
+          <div class="mb-3 form-check m-4">
+            <button (click)="onLoginClicked()" class="custom-btn">
+              Kota na kati
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="sign-up-link d-flex justify-content-center m-4">
+      <!-- <a routerLink="/register">Nanu ozali aboner te? <span>Fina awa.</span></a> -->
+      <span>Nanu ozali aboner te?</span
+      ><a class="reg-link" routerLink="/register">Fina awa</a>
+    </div>
+    <div class="text-center">
+      <a class="return-link" routerLink="/landing">Zonga</a>
+    </div>
+  </div>
+</div>

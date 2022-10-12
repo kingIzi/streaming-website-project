@@ -1,0 +1,11 @@
+<div class="container">
+  <app-navigation></app-navigation>
+  <div class="d-flex flex-column">
+    <div class="heading">
+      <p class="h1">{{ title }}</p>
+    </div>
+    <div class="body-text">
+      <p class="h4" *ngFor="let text of paragraphs">{{ text }}</p>
+    </div>
+  </div>
+</div>

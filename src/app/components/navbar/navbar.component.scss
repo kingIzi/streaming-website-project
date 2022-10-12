@@ -1,0 +1,35 @@
+.nav-bar {
+  padding: 20px;
+  a {
+    text-decoration: none;
+  }
+  .logo {
+    color: #fff;
+    font-size: 28px;
+    span {
+      color: #055216;
+    }
+  }
+  div a h6 {
+    color: #fff;
+    font-size: 24px;
+  }
+  button {
+    border: none;
+    background: #055216;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+  button:hover {
+    transform: scale(1.2);
+  }
+  @media only screen and (max-width: 600px) {
+    div a h6 {
+      font-size: 16px;
+    }
+  }
+}
