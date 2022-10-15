@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { faStar, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
+import {
+  faStar,
+  faPlayCircle,
+  faArrowLeft,
+} from '@fortawesome/free-solid-svg-icons';
 import { Video } from 'src/app/model/video';
 import { StoreService } from 'src/app/services/store.service';
 
@@ -11,11 +15,13 @@ import { StoreService } from 'src/app/services/store.service';
 })
 export class VideosListViewComponent implements OnInit {
   videosListData: Video[] = [];
+  //videosListData: number[] = [1, 2, 3, 4];
   id: string = '';
   descriptionVisible: any;
   icons = {
     faStar: faStar,
     faPlayCircle: faPlayCircle,
+    faArrowLeft: faArrowLeft,
   };
   constructor(private route: ActivatedRoute, private data: StoreService) {
     this.id = this.route.snapshot.params['videoId'];
@@ -36,7 +42,9 @@ export class VideosListViewComponent implements OnInit {
         data.id = e.payload.doc.id;
         return data;
       });
-      let foundIndex = this.videosListData.findIndex((e) => e.id === this.id);
+      let foundIndex = this.videosListData.findIndex(
+        (e: any) => e.id === this.id
+      );
       if (foundIndex !== -1) {
         this.videosListData.splice(foundIndex, 1);
       }

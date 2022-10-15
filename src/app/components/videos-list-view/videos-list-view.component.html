@@ -1,112 +1,30 @@
-<!-- <div class="container">
-  <div class="card-bg">
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-      <div *ngFor="let video of videosListData" class="col">
-        <div class="card">
-          <a routerLink="/videos/{{ video.id }}">
-            <fa-icon
-              [icon]="icons.faPlayCircle"
-              class="fa-icon play-icon"
-            ></fa-icon>
-          </a>
-          <img
-            width="100%"
-            height="300"
-            src="{{ video.thumbnailUrl }}"
-            class="thumbnail"
-            alt="..."
-          />
-          <div class="card-body">
-            <div class="d-flex bd-highlight">
-              <h5 class="card-title flex-grow-1">{{ video.title }}</h5>
-              <ul>
-                <li>
-                  <fa-icon
-                    [icon]="icons.faStar"
-                    class="fs-icon-star m-1"
-                  ></fa-icon>
-                  <fa-icon
-                    [icon]="icons.faStar"
-                    class="fs-icon-star m-1"
-                  ></fa-icon>
-                  <fa-icon
-                    [icon]="icons.faStar"
-                    class="fs-icon-star m-1"
-                  ></fa-icon>
-                  <fa-icon
-                    [icon]="icons.faStar"
-                    class="fs-icon-star m-1"
-                  ></fa-icon>
-                </li>
-              </ul>
-            </div>
-            <p class="card-text">{{ video.description }}</p>
+<div class="container d-flex flex-column">
+  <div *ngFor="let o of [1, 2]" class="videos-list m-4">
+    <p class="h1 videos-title">Ba Video ya Sika</p>
+    <div class="media-scroller">
+      <div class="media-element" *ngFor="let i of videosListData">
+        <div *ngIf="descriptionVisible !== i.id">
+          <div class="counter">
+            <span
+              ><a routerLink="/videos/{{ i.id }}">
+                <fa-icon [icon]="icons.faPlayCircle"></fa-icon> </a
+            ></span>
+            <img [src]="i.thumbnailUrl" />
           </div>
-          <a href="{{ video.videoUrl }}" class="play-icon"
-            ><i class="fa fa-play" aria-hidden="true"></i
-          ></a>
-          <script></script>
+          <p class="h4 text-title">{{ i.title }}</p>
+          <div class="d-flex actions">
+            <a class="m-1" (click)="showDescription(i.id)" mat-button>Tanga</a>
+            <a routerLink="/videos/{{ i.id }}" class="m-1" mat-button>Landa</a>
+          </div>
+        </div>
+        <div *ngIf="descriptionVisible === i.id" class="media-details">
+          <p class="h4">{{ i.title }}</p>
+          <p class="h6">{{ i.description }}</p>
+          <button class="m-1" (click)="hideDescription()" mat-button>
+            <fa-icon [icon]="icons.faArrowLeft"></fa-icon>
+          </button>
         </div>
       </div>
-    </div>
-  </div>
-</div> -->
-
-<div class="card-bg m-4">
-  <div class="row row-cols-1 row-cols-lg-2 g-4">
-    <div *ngFor="let video of videosListData" class="col-sm-2">
-      <button class="card">
-        <a class="play-icon" routerLink="/videos/{{ video.id }}">
-          <fa-icon [icon]="icons.faPlayCircle" class="fa-icon"></fa-icon>
-        </a>
-        <img
-          width="100%"
-          height="300"
-          src="{{ video.thumbnailUrl }}"
-          class="thumbnail"
-          alt="..."
-        />
-        <div class="card-body container mt-3">
-          <div class="d-flex flex-column details-holder">
-            <div class="d-flex justify-content-between">
-              <div class="flex-grow-1">
-                <h5 class="card-title">{{ video.title }}</h5>
-              </div>
-              <div>
-                <button
-                  type="button"
-                  class="custom-btn"
-                  (click)="hideDescription()"
-                  *ngIf="descriptionVisible === video.id"
-                >
-                  Bomba
-                </button>
-                <button
-                  type="button"
-                  class="custom-btn"
-                  (click)="showDescription(video.id)"
-                  *ngIf="descriptionVisible !== video.id"
-                >
-                  Monisa
-                </button>
-              </div>
-            </div>
-            <div class="ratings text-center">
-              <ul>
-                <li *ngFor="let rating of getVideoRatings(video)">
-                  <fa-icon
-                    [icon]="icons.faStar"
-                    class="fs-icon-star m-1"
-                  ></fa-icon>
-                </li>
-              </ul>
-            </div>
-            <div *ngIf="descriptionVisible === video.id" id="{{ video.id }}">
-              <p class="card-text">{{ video.description }}</p>
-            </div>
-          </div>
-        </div>
-      </button>
     </div>
   </div>
 </div>

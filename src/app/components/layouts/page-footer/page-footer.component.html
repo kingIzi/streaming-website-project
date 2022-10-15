@@ -1,0 +1,22 @@
+<footer class="text-center text-white">
+  <div class="container pt-4">
+    <section class="mb-4">
+      <a
+        *ngFor="let i of [1, 2, 3]"
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+      >
+        <fa-icon [icon]="icons.faHardHat"></fa-icon>
+      </a>
+    </section>
+  </div>
+  <div
+    class="text-center text-dark p-3"
+    style="background-color: rgba(0, 0, 0, 0.2)"
+  >
+    © 2022 Copyright:
+    <a class="text-dark" href="https://mdbootstrap.com/">Wasengele.com</a>
+  </div>
+</footer>

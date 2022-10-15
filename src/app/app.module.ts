@@ -24,6 +24,10 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AboutComponent } from './pages/about/about.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './pages/verify-email/verify-email.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatButtonModule } from '@angular/material/button';
+import { PageFooterComponent } from './components/layouts/page-footer/page-footer.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +44,7 @@ import { VerifyEmailComponent } from './pages/verify-email/verify-email.componen
     AboutComponent,
     ForgotPasswordComponent,
     VerifyEmailComponent,
+    PageFooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +52,9 @@ import { VerifyEmailComponent } from './pages/verify-email/verify-email.componen
     FontAwesomeModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatButtonModule,
     // provideFirebaseApp(() => initializeApp(environment.firebase)),
     // provideAuth(() => getAuth()),
     // provideDatabase(() => getDatabase()),
