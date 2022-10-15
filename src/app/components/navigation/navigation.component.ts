@@ -14,14 +14,11 @@ export class NavigationComponent implements OnInit {
   navItems = [
     {
       path: '/videos',
-      item: 'videos',
+      item: 'Ba Videos',
     },
     {
       path: '/about',
-      item: 'Biso',
-    },
-    {
-      item: 'Deconnecter',
+      item: 'A propos na biso',
     },
   ];
 

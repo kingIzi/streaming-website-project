@@ -11,20 +11,14 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
 import { VerifyEmailComponent } from './pages/verify-email/verify-email.component';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'videos', component: HomeComponent, canActivate: [AuthGuard] },
-  { path: 'landing', component: LandingComponent },
-  { path: '', redirectTo: '/landing', pathMatch: 'full' },
-  { path: 'register', component: RegisterComponent },
-  { path: 'about', component: AboutComponent, canActivate: [AuthGuard] },
+  { path: 'videos', component: HomeComponent },
+  { path: '', redirectTo: '/videos', pathMatch: 'full' },
+  { path: 'about', component: AboutComponent },
   { path: 'biso', redirectTo: '/about', pathMatch: 'full' },
   {
     path: 'videos/:videoId',
     component: StreamingComponent,
-    canActivate: [AuthGuard],
   },
-  { path: 'forgot-password', component: ForgotPasswordComponent },
-  { path: 'verify-email', component: VerifyEmailComponent },
 ];
 
 @NgModule({

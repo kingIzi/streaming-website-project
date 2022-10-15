@@ -11,13 +11,6 @@
         <a
           [routerLinkActive]="'active-nav-item'"
           routerLink="/{{ item.path }}"
-          *ngIf="item.item !== navItems[2].item"
-          >{{ item.item }}</a
-        >
-        <a
-          [routerLinkActive]="'active-nav-item'"
-          (click)="logoutUser()"
-          *ngIf="item.item === navItems[2].item"
           >{{ item.item }}</a
         >
       </li>
